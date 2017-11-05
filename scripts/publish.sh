@@ -6,5 +6,6 @@ git checkout -b "$1"
 git merge master
 sed -i -e 's/dist/tralala\//g' .gitignore;
 git add -A 
+git status
 git commit -am "$CIRCLE_BRANCH build#$CIRCLE_BUILD_NUM"
 git push --force --set-upstream origin $1 
