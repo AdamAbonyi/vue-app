@@ -1,16 +1,16 @@
 <template>
   
   <div class="page">
-    <h2>My First Vue App 
+    <!-- <h2>My First Vue App 
       <small>b0brB0t v 0.1.1</small>
-    </h2>
+    </h2> -->
     <!-- <counter></counter> -->
     <div>
       <v-form>
       <v-container fluid grid-list-xl>
           <v-layout row justify-center>
             <v-flex xs2>
-              <v-text-field label="Subreddit Input"
+              <v-text-field label="Subreddit Name"
                 v-model="subreddit"
                 :rules="subredditRules"> 
             </v-text-field>
@@ -36,8 +36,7 @@ export default {
     return {
       subreddit: '', 
       subredditRules: [
-          (v) => !!v || 'Name is required',
-          (v) => v.length <= 10 || 'Name must be less than 10 characters'
+          (v) => !!v || 'Subreddit name is required'
         ]
     }
   }
