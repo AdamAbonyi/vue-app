@@ -59,6 +59,3 @@ typings/
 
 # dist folder
 dist/
-
-# build folder (dev build)
-build/

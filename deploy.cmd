@@ -94,11 +94,11 @@ call :SelectNodeVersion
 echo 2. Install npm packages
 pushd "%DEPLOYMENT_SOURCE%"
 IF EXIST "package.json" (
-  call :ExecuteCmd !NPM_CMD! install --production
+  call :ExecuteCmd !NPM_CMD! install 
   IF !ERRORLEVEL! NEQ 0 goto error
 
   echo React Scripts
-  call .\node_modules\.bin\react-scripts build
+  call :ExecuteCmd !NPM_CMD! run build
   IF !ERRORLEVEL! NEQ 0 goto error
 )
 popd
