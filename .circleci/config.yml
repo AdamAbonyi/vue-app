@@ -39,16 +39,16 @@ jobs:
 
       - run: npm run build
 
-- add_ssh_keys:
-    fingerprints:
-      - "1a:2c:5b:f2:05:5e:e8:fe:53:c5:74:e9:02:b6:81:54"
+      - add_ssh_keys:
+          fingerprints:
+            - "1a:2c:5b:f2:05:5e:e8:fe:53:c5:74:e9:02:b6:81:54"
 
-# Deploy production
-  - deploy:
-      command: |
-        if [ "${CIRCLE_BRANCH}" == "master" ];
-          then ./scripts/publish.sh production;
-        fi 
+      # Deploy production
+      - deploy:
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ];
+              then ./scripts/publish.sh production;
+            fi 
 
   
 
