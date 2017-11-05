@@ -45,7 +45,6 @@ jobs:
           fingerprints:
             - "fb:fa:16:e7:fa:64:e6:24:32:5f:f3:cf:9c:83:50:90"
 
-
       # Deploy production
       - deploy:
           command: |
