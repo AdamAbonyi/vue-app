@@ -50,6 +50,5 @@ jobs:
       - deploy:
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then 
-              sed -i -e 's/dist\//#dist/g' .gitignore;
               sh ./scripts/publish.sh production;
             fi 
