@@ -43,7 +43,7 @@ jobs:
       # Add Github key
       - add_ssh_keys:
           fingerprints:
-            - "1a:2c:5b:f2:05:5e:e8:fe:53:c5:74:e9:02:b6:81:54"
+            - "fb:fa:16:e7:fa:64:e6:24:32:5f:f3:cf:9c:83:50:90"
 
 
       # Deploy production
