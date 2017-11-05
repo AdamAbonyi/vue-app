@@ -49,6 +49,7 @@ jobs:
       # Deploy production
       - deploy:
           command: |
-            if [ "${CIRCLE_BRANCH}" == "master" ];
-             then sh ./scripts/publish.sh production;
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then 
+              sed -i -e 's/dist\//#dist/g' .gitignore;
+              sh ./scripts/publish.sh production;
             fi 
