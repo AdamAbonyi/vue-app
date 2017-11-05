@@ -49,7 +49,6 @@ jobs:
       # Deploy production
       - deploy:
           command: |
-            ./scripts/publish.sh production;
-            #if [ "${CIRCLE_BRANCH}" == "master" ];
-            #  then ./scripts/publish.sh production;
-            #fi 
+            if [ "${CIRCLE_BRANCH}" == "master" ];
+             then sh ./scripts/publish.sh production;
+            fi 
