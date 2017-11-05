@@ -37,27 +37,19 @@ jobs:
       # run tests!
       # run: npm run test
 
+      # Build Project
       - run: npm run build
 
+      # Add Github key
       - add_ssh_keys:
           fingerprints:
             - "1a:2c:5b:f2:05:5e:e8:fe:53:c5:74:e9:02:b6:81:54"
 
+
       # Deploy production
       - deploy:
           command: |
-            if [ "${CIRCLE_BRANCH}" == "master" ];
-              then ./scripts/publish.sh production;
-            fi 
-
-./scripts/publish.sh
-
-#!/bin/bash
-git config --global user.email "$USER_EMAIL"
-git config --global user.name "$USER_NAME"
-
-git checkout -b "$1"
-git merge master
-git commit -am "$CIRCLE_BRANCH build#$CIRCLE_BUILD_NUM"
-git push --force --set-upstream origin $1
-
+            ./scripts/publish.sh production;
+            #if [ "${CIRCLE_BRANCH}" == "master" ];
+            #  then ./scripts/publish.sh production;
+            #fi 
