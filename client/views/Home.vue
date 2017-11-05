@@ -2,7 +2,7 @@
   
   <div class="page">
     <h2>My First Vue App 
-      <small>b0brB0t</small>
+      <small>b0brB0t v 0.1</small>
     </h2>
     <!-- <counter></counter> -->
     <div>
