@@ -6,7 +6,7 @@
     </h2> -->
     <!-- <counter></counter> -->
     <div>
-      <v-form>
+      <v-form v-on:submit="$store.dispatch('requestSubredditContent',subreddit)">
       <v-container fluid grid-list-xl>
           <v-layout row justify-center>
             <v-flex xs2>
@@ -16,7 +16,10 @@
             </v-text-field>
             </v-flex>
             <v-flex xs2 justify-start>
-              <v-btn style="margin-top:12px" color="primary">Send</v-btn>
+              <v-btn type="submit"
+                    style="margin-top:12px" color="primary">
+                Send
+              </v-btn>
             </v-flex>
           </v-layout>
       </v-container>

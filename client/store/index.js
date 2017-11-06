@@ -14,11 +14,9 @@ const mutations = {
 }
 
 const actions = {
-  // incrementAsync ({ commit }) {
-  //   setTimeout(() => {
-  //     commit('INCREMENT')
-  //   }, 200)
-  // }
+  requestSubredditContent ({commit}, param1) {
+    alert(`Vuex Action called with param ${param1}`);  
+  }
 }
 
 const store = new Vuex.Store({
