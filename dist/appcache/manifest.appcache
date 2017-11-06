@@ -1,0 +1,16 @@
+CACHE MANIFEST
+#ver:2017-11-6 23:18:45
+#plugin:4.8.4
+
+CACHE:
+/vendor.4ab47ddc.js
+/client.e02b215a.js
+/manifest.bbb1210b.js
+/
+/favicon.ico
+
+NETWORK:
+*
+
+FALLBACK:
+/ /
